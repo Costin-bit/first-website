@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- I tag <meta> forniscono informazioni aggiuntive sulla pagina e ai suoi contenuti -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Definisce il titolo della pagina -->
+    <title>Prova</title>
+
+    <!-- Definisce l'URL di base per tutti i collegamenti relativi alla pagina -->
+    <base href="http://tutorial-frontend/">
+
+    <!-- Definisce una relazione fra il documento corrente ed una risorsa esterna -->
+    <link rel="stylesheet" type="text/css" href="Introduzione.css" media="screen">
+
+    <!-- Consente di importare o scrivere codice da eseguire all'interno della pagina lato client -->
+    <script src="Introduzione.js"></script>
+</head>
+<body>
+    <!-- Le sezioni servono per separare i contenuti tra loro e per definire il layout
+        Generalmente si usano i tag <div> e <span>, la differenza è che lo <span> non separa dagli altri contenuti
+        Su internet ci sono i tag per per ogni specifica sezione del sito -->
+
+    <!-- Oltre a facilitare la lettura, facilità i motori di ricerca nell'analisi della pagina -->
+    <h1> Titolo h1 </h1>
+
+    <!-- I paragrafi sono contenitori di blocchi di testo -->
+    <p> Paragrafo </p>
+
+    <!-- Quando usato, permette di andare a capo, spesso si usa nei paragrafi -->
+    <br>
+
+    <!-- Alcuni tag di formattazzione del testo sono i seguenti-->
+    <b> Testo in grassetto </b>
+    <i> Testo in corsivo </i>
+    <u> Testo sottolineato </u>
+    <sub> Pedice </sub><sup> Apice </sup>
+
+    <!-- Il tag <a> crea un collegamento tra la pagina corrente e un'altro file esterno -->
+    <a href="https://www.google.com"> Google </a>
+
+    <!-- Il tag <img> definisce un'immagine. L'attributo src="" è il percorso dell'immagine da inserire, alt="" è il testo mostrato nel caso l'immagine non viene caricata,
+        width="" è la larghezza mentre height="" è l'altezza dell'immagine -->
+    <img src="" alt="" width="" height="">
+
+    <!-- Il tag <table> crea tabelle, <th> serve per dare un titolo alla tabella, <tr> crea una rifa e <td> crea una colonna -->
+    <table>
+        <tr>
+            <th> Prima Colonna </th>
+            <th> Seconda Colonna </th>
+        </tr>
+        <tr>
+            <td> dato1_cella1 </td>
+            <rd> dato1_cella2 </rd>
+        </tr>
+        <tr>
+            <td> dato2_cella1 </td>
+            <td> dato2_cella2 </td>
+        </tr>
+    </table>
+
+    <!-- Per elencare oggetti si usano le liste, ci sono liste ordinate <ol> e non ordinate <ul>, per creare un elemento della lista si usa il tag <li> -->
+    <ul>
+        <li> elemento 1 </li>
+        <li> elemento 2 </li>
+        <li> elemento 3 </li>
+    </ul>
+    <ol>
+        <li> elemento </li>
+        <li> elemento </li>
+        <li> elemento </li>
+    </ol>
+
+    <!-- I form sono utili perchè consente all'utente di inviare dei dati al sito, alcuni attributi sono:
+        action="" definisce la risorsa a cui passare i dati inseriti, method="" specifica come i dati vengono inviati(POST o GET) -->
+    <form action="file-backend.py" method="post">
+
+        <!-- Il tag <label> è un etichetta e bisogna crearla per ogni elemento di input
+            Si associa un label specificando, nell'attributo for="" l'id dell'elemento input -->
+            <label for="username"> Username </label>
+
+            <!-- Il tag <imput> e <textarea> servono per permettere l'inserimento di dati da parte dell'utente come per esempio (testo, file, immagini...)
+            l'attributo typr="" serve per definire il tipo di dato che può essere inserito -->
+            <input type="text" name="username" id="username" value="Inserisci Username"/>
+            <br>
+            <label for="password"> Password </label>
+            <input type="password" name="password" id="password" value="Inserisci password"/>
+        </label>
+    </form>
+
+    <!-- Per inserire un file video si utilizza il tag <video> con gli attributi:
+        width="" che indica la larghezza, height="" che indica l'altezza,
+        src="" che è il percorso del file e type="" che specifica il tipo -->
+    <video width="400" height="400">
+        <source src="" type="video/mp4">
+    </video>c
+
+    <!-- Per inserire un file audio si usa il tag <audio> associato alla keyword "controls"
+        gli attributi da utilizzare sono src="" e type="" -->
+    <audio controls>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <!-- Il canvas è un'area di disegno -->
+    <canvas>
+
+    </canvas>
+
+    <!-- Drag & Drop è la funzionalità che permette di creare dei blocchi che accettino dati trascinati da altri -->
+    
+
+    <br><br><hr>
+
+    <!-- Successivamente serve per il tuttorial di CSS ---------------------------------------------------------------------->
+
+    <h1 class="prova-classe" title="titolo"></h1>
+    <!-- E' possibile assegnare più classi allo stesso elemento -->
+    <h2 class="classe-1 classe-2"
+
+    <h1 class="prova-identificatore"></h1>
+
+    <h3></h3>
+
+    <h3 id="identificatore"></h3>
+
+    <a></a>
+
+    <div id="background-image"></div>
+
+    <div id="testo"><p> Questo è un testo </p></div>
+
+    <a href="#" id="link"> Link generico </a>
+
+    <ol id="lista-ordinata">
+        <li> elemento 1 </li>
+        <li> elemento 2 </li>
+    </ol>
+
+    <ul id="lista-non-ordinata">
+        <li> elemento 1 </li>
+        <li> elemento 2 </li>
+    </ul>
+
+    <table id="tabella">
+        <tr>
+            <th> Prima Colonna </th>
+            <th> Seconda Colonna </th>
+        </tr>
+        <tr>
+            <td> dato1_cella1 </td>
+            <rd> dato1_cella2 </rd>
+        </tr>
+        <tr>
+            <td> dato2_cella1 </td>
+            <td> dato2_cella2 </td>
+        </tr>
+    </table>
+
+    <div id="box-model"></div>
+
+    <div id="display"></div>
+
+</body>
+</html>

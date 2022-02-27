@@ -1,0 +1,230 @@
+/* Questo è un commento in CSS */
+
+/* Questo è il Selettore universale (cioè che comprende tutti gli elementi della pagina) */
+* {  } 
+
+/* Selettore specifico per TAG: */
+body {  }
+
+/* Differenza tra Identificatore e Classe:
+Un Identificatore si utilizza quando si deve applicare le modifiche a un solo elementoi della pagina.
+Una Classe si utilizza quando le solite modifiche devono essere applicate a più elementi.
+*/
+
+/* Selettore specifico per Classi: */
+.prova-classe {  }
+
+/* Per selezionare più classi contemporaneamente è possibile farlo separando nel seguente modo */
+.classe-1, .classe-2 {  }
+
+/* Selettore specifico per Identificatori: */
+#prova-identificatore {  }
+
+/* Per applicare le modifiche a più elementi, bisogna separarli con una virgola */
+h1, p {  }
+
+/* Possiamo combinare più selettori tra di loro */
+h3, #identificatore {  }
+
+/* Possiamo modificare i tag che hanno determinati attributi */
+h1[title="titolo"] {  }
+
+/* Le Pseudoclassi sono delle classi definite al di fuori dal documento web, si usano scrivendo il Selettore:Pseudoclasse */
+a:link {  } /* Definisce l'aspetto dei link quando non sono stati visitati */
+
+a:visited {  } /* Definisce l'aspetto dei link visitati */
+
+a:hover {  } /* Definisce l'aspetto dell'elemento quando il mouse ci passa sopra (senza click) */
+
+a:active {  } /* Definisce l'aspetto dell'elemento quando viene attivato */
+
+a:focus {  } /* Definisce l'aspetto di un elemento quando viene selezionato */
+
+/* Una lista completa delle Pseudoclassi si trova al link: https://www.w3schools.com/css/css_pseudo_classes.asp */
+
+/* I Pseudoelementi permettono di generare elementi nel documento che non hanno importanza semantica
+Non funzionano con gli elementi SENZA CONTENUTO */
+
+h1:before {  } /* Crea un elemento che sta prima di quello selezionato */
+
+h1:after {  } /* Crea un elemento che sta dopo l'elemento selezionato */
+
+h1:first-line {  } /* Identifica la prima linea di un qualsiasi blocco di testo */
+
+h1:first-letter {  } /* Identifica la prima lettera di un qualsiasi blocco di testo */
+
+/*-------------------------------------------------------------*/
+
+/* Le DIMENSIONI di un oggetto possono essere definite in tanti modi:
+1. % (percentuale): rispetto alla dimensione dell'elemento contenitore
+2. in (pollici)
+3. cm (centimetri)
+4. mm (millimetri)
+5. px (pixel): ovvero un punto sullo schermo
+6. pt (1pt = 1/72in)
+7. em : 1em rappresenta la dimensione del font corrente. In questo modo è possibile adattare la dimensione del testo
+*/
+
+/* Per definire i COLORI di un oggetto è possibile farlo con:
+1. Scrivendo i loro nomi (red, green, black...)
+2. Specificando il valore con rgb(valori tra 0-256)
+3. RGB Esadecimale (#000000)
+4. RGB base 10 (255, 255, 255)
+
+Insieme al colore, possiamo applicare una TRASPARENZA all'oggetto gestito da valori compresi tra 0(massima trasparenza) e 1 (minima trasparenza)
+1. rgba(40, 40, 40, 0.5)
+
+/* E' possibile impostare come background un'immagine nel seguente modo: 
+L'immagine verrà ripetuta sull'asse x e y, per provederre a questo problema si usa la proprietà "no-repeat" 
+Per posizionare l'immagine è possibile farlo in 3 modi: 
+    1. Usare i valori come %, pixel, cm, mm...
+    2. top center bottom (asse y)
+    3. left center right (asse x) */
+#background-image {
+    background-image: url("url dell'immagine");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* I TESTI
+E' possibile cambiare il colore.
+E' possibile cambiare la posizione.
+Usare la proprietà "text-decoration".
+Identare il testo.
+Cambiare il font "font-family" è composto da due valori: 
+    1. family-name: definisce il nome di una famiglia di font
+    2. generic name: definisce lo stile
+Cambiare lo stile con la proprietà "font-style": 
+    1. normal: è quello di default
+    2. italic: corsivo
+    3. oblique: simile al corsivo
+Cambiare la dimensione con "font-size"
+Cambiare lo spessore con "font-weight": 
+    1. bold
+    2. normal
+    3. bolder
+    ... */
+#testo {
+    color: green;
+    text-align: center;
+    text-decoration: underline;
+    text-indent: 50px;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* I LINK
+Possiamo usare le pseudoclassi per quando l'utente interagisce con il link: 
+    1. a:hover : per lo stato "normale"
+    2. a:visited : per i link visitati
+    3. a:hover : quando il puntatore è sopra il link
+    4. a:sctive : quando il link viene cliccato
+*/
+#link:hover {
+    color: green;
+}
+/* LISTE Ordinate
+Possiamo utilizzare la proprietà "list-style-type" per cambiare il tipo di numerazione: 
+    1. decimal : numerazione decimale classica (default)
+    2. lower-aloha : lettere minuscole (a, b, c...)
+    3. lower-roman : numeri romani minuscoli (i, ii, iii, iv...)
+    4. upper-alpha : lettere maiuscole (A, B, C...)
+    5. upper-roman : numeri romani maiuscoli (I, II, III, IV...)
+Possiamo rimpiazzare il tipo di numerazione con un immagine con la proprietà "list-type-image"
+e cambiare la posizione del bullet rispetto al testo con "list-type-position"
+*/
+#lista-ordinata {
+    list-style-type: upper-roman;
+}
+
+/* LISTE non Ordinate
+Possiamo utilizzare la proprietà "list-style-type" per cambiare il tipo di numerazione
+    1. none : nessun bullet
+    2. circle : un cerchio vuoto (solo bordo)
+    3. disc : un cerchio pieno (default)
+    4. square : un quadrato
+Possiamo rimpiazzare il tipo di numerazione con un immagine con la proprietà "list-type-image"
+e cambiare la posizione del bullet rispetto al testo con "list-type-position"
+*/
+#lista-non-ordinata {
+    list-style-type: circle;
+    list-style-image: url("url-immagine");
+}
+
+/* TABELLE
+E' possibile impostare le dimensioni e i bordi di ogni cella
+La proprietà "border-collaps:collapse;" permette di attaccare i bordi adiacenti un uno solo 
+*/
+#tabella {
+    border-collapse: collapse;
+}
+
+/* BOX MODEL
+Ogni elemento viene considerato come un rettangolo composto da (Margin, Border, Padding e Content)
+1. Margin : è un'area libera attorno al bordo, completamente trasparente
+2. Border : un bordo che racchiude il rettangolo
+3. Padding : un'area libera tra il bordo ed il contenuto
+4. Content : l'area del contenuto vero e proprio
+
+In CSS ci sono 4 parole chiave per riferirci ai lati del rettangolo di un elemento (top, right, bottom, left)
+Per ridimensionare un elemento possiamo scrivere "margin-top: 10px;"
+
+Possiamo modificare anche l'altezza e la larghezza (height, width)
+
+E' possibile modificare anche il bordo con la proprietà "border-style"
+*/
+#box-model {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-style: dashed;
+}
+
+/* DISPLAY
+La proprietà "display" regola il modo in cui un elemento viene visualizzato
+1. block : l'elemento prende tutta la larghezza disponibile e viene aggiunta un'interruzione di riga prima e dopo
+2. inline : prende solo la larghezza disponibile e non si aggiungono interruzioni di riga prima e dopo
+3. non : nasconde l'elemento (non prende nessun spazio)
+4. inline-block : l'elemento è inline, ma si può regolare la larghezza tramite l'apposita proprietà
+
+Per nascondere un elemento dalla pagina ci sono 2 modi per farlo: 
+1. visibility: hidden;
+2. display: none;
+La differenza consiste che utilizzando "visibility: hidden;" il browser non mostra il contenuto ma comunque calcola la sua dimensione e quindi occuperà spazio sulla pagina
+*/
+#display {
+    display: block;
+}
+
+/* POSIZIONAMENTO
+Per posizionare un elemento usiamo la proprietà "position" che può assumere 4 diversi valori: 
+    1. static : gli elementi vengono posizionati secondo il flusso normale della pagina (default)
+    2. fixed : l'elemento è posizionato in modo relativo alla finestra del browser, cioè rimane nella stessa posizione anche se si scorre la pagina
+    3. relative : definisce la posizione di un elemento a partire dalla sua posizione normale. Viene combinato con queste proprietà: 
+        1. "top", "bottom", "left", "right"
+    4. absolute : definisce la posizione di un elemento rispetto alla posizione del primo elemento che lo contiene e che ha un valore di position diverso da static
+    Può essere modificato con le proprietà: "top", "bottom", "left", "right"
+
+La proprietà "z-index" consente di definire quale sia l'elemento in primo piano assegnando un valore intero ad esso
+L'elemento con il valore maggiore in "z-index" sarà sovrapposto sopra l'elemento che avrà un valore minore in "z-index"
+
+La proprietà "float" è usata per rimuovere un elemento dal normale flusso del documento, spostandolo su uno dei due lati, possiamo dargli 3 possibili valori: 
+    1. right
+    2. left
+    3. none
+*/
+
+/*LAYOUT PATTERNS
+Sono degli schemi ricorrenti usati per strutturare le pagine, Esistono tanti degisn, i principali sono: 
+    1. Layout Fluido : si ridimensiona a seconda dello larghezza dello schermo
+    2. Layout Fisso : non si ridimensiona a seconda dello schermo
+Ognuno con tre varianti:
+    1. due colonne, barra di navigazione a sinistra
+    2. due colonne, barra di navigazione a destra
+    3. tre colonne
+*/
+
